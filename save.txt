@@ -1,2 +1,40 @@
-The primary job title for this skillset is AI Engineer (or Applied AI Engineer).If you want to lean heavier into the backend, scaling, and hardware optimization side, the equivalent high-infrastructure title is Machine Learning Systems Engineer (ML Systems Engineer / AI Infrastructure Engineer).Here is how the roles break down so you can match them against job postings:1. Applied AI Engineer / AI Engineer (Best Direct Match)What you do: You do not invent new model architectures or prove theorems. You understand model mechanics (tokens, loss, embeddings, context limits, inference trade-offs) and use software engineering to turn raw models into reliable, production-ready software.Daily work:Building production RAG pipelines (chunking, semantic search, hybrid vector search with PostgreSQL/pgvector).Optimizing inference latency and throughput for deployed models.Designing API layers, caching layers (semantic cache, prompt caching), and fallback systems.Evaluating model output accuracy and hallucination rates systematically.2. ML Systems / AI Infrastructure Engineer (Deeper into Hardware & Serving)What you do: You sit at the exact intersection of deep learning internals and backend/systems engineering. You care less about prompt craft and much more about compute efficiency, memory footprints, and serving hardware.Daily work:Deploying models to GPUs and NPUs using optimized inference engines (vLLM, TensorRT-LLM, TGI).Managing the KV Cache, continuous batching, and GPU VRAM memory allocation.Applying post-training quantization (AWQ, GPTQ, INT8, FP8) so multi-gigabyte models fit onto specific target hardware.Eliminating memory-bandwidth bottlenecks between host memory and accelerator memory.How These Differ from Other Common TitlesRole TitleMath / ProofsResearch / PapersSystems & Backend CodeModel Mechanics UnderstandingAI ResearcherHeavy (calculus, proofs)High (writing papers)Low / ScriptingFundamentalData ScientistHeavy (statistics, analytics)Medium (business reports)Low / NotebooksMediumML Engineer (Traditional)MediumLowHigh (data pipelines, training runs)HighApplied AI / AI EngineerMinimal (conceptual only)NoneHigh (APIs, RAG, Apps)High (Mechanics)ML Systems EngineerMinimal (conceptual only)NoneVery High (C++, CUDA, Kernels, VRAM)High (Hardware/Silicon)
+# Role Profiles in Applied AI & Machine Learning Systems
 
+## 1. Overview of Industry Job Roles
+
+The engineering industry divides applied machine learning work into two primary roles:
+
+1. **Applied AI Engineer (AI Engineer):** Focuses on application architectures, retrieval pipelines, API integration, and model reliability.
+2. **Machine Learning Systems Engineer (AI Infrastructure Engineer):** Focuses on low-level compute efficiency, hardware serving, memory allocation, and kernel optimization.
+
+---
+
+## 2. Role Breakdowns
+
+### Role 1: Applied AI Engineer (Application & Systems Layer)
+- **Primary Objective:** Deliver production software using existing foundation models.
+- **Core Responsibilities:**
+  - Build Retrieval-Augmented Generation (RAG) pipelines using hybrid vector search.
+  - Design resilient API interfaces, prompt caching layers, and semantic caches.
+  - Implement evaluation harnesses to track model accuracy and hallucination rates.
+  - Construct deterministic agentic workflows and tool-calling interfaces.
+
+### Role 2: ML Systems Engineer (Infrastructure & Silicon Layer)
+- **Primary Objective:** Maximize hardware throughput and minimize inference latency on GPUs and accelerators.
+- **Core Responsibilities:**
+  - Deploy models using optimized serving engines such as vLLM and TensorRT-LLM.
+  - Manage Key-Value (KV) cache memory and continuous batching schedulers.
+  - Quantize large models (AWQ, GPTQ, FP8) to fit within strict VRAM budgets.
+  - Optimize memory bandwidth and eliminate PCIe data transfer bottlenecks.
+
+---
+
+## 3. Comparison Across Machine Learning Disciplines
+
+| Role Title | Math & Proofs | Research & Papers | Systems & Backend Code | Model Mechanics Understanding |
+| :--- | :--- | :--- | :--- | :--- |
+| **AI Researcher** | High (Calculus, Linear Algebra) | High (Authors primary literature) | Low (Prototyping scripts) | Fundamental |
+| **Data Scientist** | High (Statistics, Analytics) | Medium (Internal reports) | Low (Jupyter notebooks) | Medium |
+| **ML Engineer (Traditional)** | Medium | Low | High (Data pipelines, training runs) | High |
+| **Applied AI Engineer** | Minimal (Conceptual only) | None | High (APIs, RAG, Web services) | High (Production mechanics) |
+| **ML Systems Engineer** | Minimal (Conceptual only) | None | Very High (C++, CUDA, Kernels, VRAM) | High (Hardware and silicon) |
